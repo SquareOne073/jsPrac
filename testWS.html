@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <span>전체선택</span>
+        <input type="checkbox" id="allChk"><br>
+        <span>체크 1</span>
+        <input type="checkbox" name="check" value="1"><br>
+        <span>체크 2</span>
+        <input type="checkbox" name="check" value="2"><br>
+        <span>체크 3</span>
+        <input type="checkbox" name="check" value="3"><br>
+        <span>체크 4</span>
+        <input type="checkbox" name="check" value="4">
+    </div>
+
+</body>
+
+<script type="text/javascript">
+
+
+    $('#allChk').click(function() {
+
+        var isChecked = document.getElementById('allChk').checked;
+        var chks = document.getElementsByName('check');
+
+        for(var i=0; i<chks.length; i++) {
+            chks[i].checked = isChecked;
+        }
+
+
+    });
+
+</script>
+</html>
